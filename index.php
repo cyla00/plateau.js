@@ -7,7 +7,10 @@
   </head>
   <body>
     <div class="plateau">
+      <div class="quadrato">
 
+      </div>
     </div>
+    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
