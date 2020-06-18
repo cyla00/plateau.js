@@ -44,3 +44,17 @@ if (x < 0 + "px") x = 0 + "px"; // Si elles sont inférieures à 0
 if (y < 0 + "px") y = 0 + "px";
 if (x > 760 + "px") x = 760 + "px";// Si elles sont supérieures à 760
 if (y > 760 + "px") y = 760 + "px";
+
+
+const random_element = document.getElementByClassName('random');
+let creation = document.createElement('random');
+
+
+const getRandomInRange = ((from, to, fixed) => {
+  return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
+})
+
+
+if(creation){
+  getRandomInRange(creation);
+}

@@ -16,7 +16,15 @@ body{
   border: solid 1px #ccff66;
   position: absolute;
 }
-
+.random{
+  width: 20px;
+  height: 20px;
+  background-color: #ffa200;
+  border: solid 1px #ccff66;
+  border-radius: 100%;
+  position: absolute;
+  display: none;
+}
 #pion{
   width: 40px;
   height: 40px;

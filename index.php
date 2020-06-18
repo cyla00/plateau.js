@@ -9,9 +9,8 @@
   </head>
   <body>
     <div id="plateau">
-      <div id="pion">
-
-      </div>
+      <div class="random"></div>
+      <div id="pion"></div>
     </div>
     <script src="script.js"></script>
   </body>
