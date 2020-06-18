@@ -1,5 +1,5 @@
 var size = 19;
-var box = document.getElementsByClassName("box")[0]
+var box = document.getElementsByClassName("plateau")[0]
 for(var wx = 1; wx < size; wx++)
 {
   for(var wy = 1; wy < size; wy++)
@@ -17,8 +17,8 @@ for(var wx = 1; wx < size; wx++)
     }
   }
 }
-var token = document.getElementById('token'),
-    s = token.style; // Un petit raccourci
+var quadrato = document.getElementsByClassName('quadrato'),
+    s = quadrato.style; // Un petit raccourci
 var x = 0;
 var y = 0;
 
