@@ -9,9 +9,11 @@
   </head>
   <body>
     <div id="plateau">
-      <div class="random"></div>
-      <div id="pion"></div>
+      <div id="pion">
+
+      </div>
     </div>
+    <script src="creazione_base.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

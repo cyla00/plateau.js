@@ -1,29 +1,13 @@
 
 body{
   background-color: #e6ccff;
-  display: flex;
-  justify-content: center;
 }
-
 #plateau{
-  width: 800px;
-  height: 800px;
-  background-color: #b3b3b3;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  border: solid 1px #ccff66;
-  position: absolute;
-}
-.random{
-  width: 20px;
-  height: 20px;
-  background-color: #ffa200;
-  border: solid 1px #ccff66;
-  border-radius: 100%;
-  position: absolute;
-  display: none;
+  position: relative;
 }
 #pion{
   width: 40px;
@@ -33,4 +17,5 @@ body{
   position: absolute;
   top: 0px;
   left: 0px;
+  z-index: 100;
 }

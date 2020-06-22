@@ -1,60 +1,34 @@
-//var plateau = document.getElementById('plateau'); // variables objet
-var pion = document.getElementById('pion');
-var x;
-var y;
 
-// programmation des touches de direction
-document.onkeydown = function(event) {
-  if (event.keyCode == 37) gauche();
-  if (event.keyCode == 39) droite();
-  if (event.keyCode == 38) haut();
-  if (event.keyCode == 40) bas();
-} // fin fonction
-
-// quatre fonctions de déplacement
-function gauche() {
-  x = getComputedStyle(pion).left;
-  x = parseInt(x);
-  x = x - 40 + "px";
-  pion.style.left = x;
-}
-
-function droite() {
-  x = getComputedStyle(pion).left;
-  x = parseInt(x);
-  x = x + 40 + "px";
-  pion.style.left = x;
-}
-
-function haut() {
-  y = getComputedStyle(pion).top;
-  y = parseInt(y);
-  y = y - 40 + "px";
-  pion.style.top = y;
-}
-
-function bas() {
-  y = getComputedStyle(pion).top;
-  y = parseInt(y);
-  y = y + 40 + "px";
-  pion.style.top = y;
-}
-
-if (x < 0 + "px") x = 0 + "px"; // Si elles sont inférieures à 0
-if (y < 0 + "px") y = 0 + "px";
-if (x > 760 + "px") x = 760 + "px";// Si elles sont supérieures à 760
-if (y > 760 + "px") y = 760 + "px";
+var pion = document.getElementById('pion'),
+x = pion.offsetLeft,
+y = pion.offsetTop;
 
 
-const random_element = document.getElementByClassName('random');
-let creation = document.createElement('random');
 
+document.onkeydown = function(){
+  var event = event || window.event,
+  tasti_keyboard = event.keyCode;
+  switch(tasti_keyboard) {
+    case 38: // touche "Flèche Haut"
+      if (y > 0 && blocGrid[x / GRID_SIZE][y / GRID_SIZE -1].traverser)
+      y = y - GRID_SIZE;
+      break;
 
-const getRandomInRange = ((from, to, fixed) => {
-  return (Math.random() * (to - from) + from).toFixed(fixed) * 1;
-})
+    case 39: // touche "Flèche Droite"
+      if (x < WINDOW_WIDTH && blocGrid[x / GRID_SIZE +1][y / GRID_SIZE].traverser)
+      x = x + GRID_SIZE;
+      break;
 
+    case 40: // touche "Flèche Bas"
+      if (y < WINDOW_HEIGHT && blocGrid[x / GRID_SIZE][y / GRID_SIZE +1].traverser)
+      y = y + GRID_SIZE;
+      break;
 
-if(creation){
-  getRandomInRange(creation);
-}
+    case 37: // touche "Flèche Gauche"
+      if (x > 0 && blocGrid[x / GRID_SIZE -1][y / GRID_SIZE].traverser)
+      x = x - GRID_SIZE;
+      break;
+    }
+      pion.style.left = String(x) + 'px';
+      pion.style.top = String(y) + 'px';
+    }
