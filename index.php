@@ -14,6 +14,7 @@
       </div>
     </div>
     <script src="creazione_base.js"></script>
-    <script src="script.js"></script>
+    <script src="personaggio.js"></script>
+    <script src="trofeo.js"></script>
   </body>
 </html>
