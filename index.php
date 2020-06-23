@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="info">
+      <h1 class="title">Bombza</h1>
+      <p class="commands">commands:<br>⬆️UP<br>⬇️DOWN<br>⬅️LEFT<br>➡️RIGHT<br>💣SPACE</p>
+    </div>
     <div id="plateau">
-      <div id="pion">
-
-      </div>
+      <div id="nemico"></div>
+      <div id="pion"></div>
     </div>
     <script src="creazione_base.js"></script>
+    <script src="nemico.js"></script>
     <script src="personaggio.js"></script>
     <script src="trofeo.js"></script>
   </body>

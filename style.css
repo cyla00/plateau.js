@@ -1,9 +1,31 @@
+@font-face {
+  font-family: 'head';
+  src: url('./fonts/head.otf');
+}
+
+
 
 body{
   background-image: url('img/back.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: inline-flex;
+}
+.info{
+  margin-right: 30vh;
+}
+.title{
+  font-family: head;
+  font-size: 50px;
+  color: #00e699;
+  margin: 5vh;
+}
+.commands{
+  font-family: head;
+  font-size: 30px;
+  color: #00e699;
+  margin: 5vh;
 }
 #plateau{
   margin-left: auto;
@@ -21,6 +43,20 @@ body{
   background-color: #142952;
   border: none;
   background-image: url('./img/putin.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+#nemico{
+  width: 40px;
+  height: 40px;
+  background-color: #e60000;
+  border: none;
+  background-image: url('./img/trump.png');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100%;

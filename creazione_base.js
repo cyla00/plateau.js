@@ -31,6 +31,7 @@ for(var i = 0; i < H_GRID; i++){
     else if (random100() > 50 && random100() <= 80 ) {
       bloc.style.backgroundImage = "url('img/land.jpg')";
       bloc.style.backgroundSize = "cover";
+      bloc.classname = "bloc_distruttibile";
       bloc.traverser = false;
     }
     else {
@@ -132,6 +133,12 @@ blocGrid[1][V_GRID - 2].style.zIndex = "10";
 blocGrid[1][V_GRID - 2].style.backgroundSize = "cover";
 blocGrid[1][V_GRID - 2].traverser = true;
 
+
+blocGrid[H_GRID / 2][V_GRID /2].style.backgroundImage = "url('img/earth.png')";
+blocGrid[H_GRID / 2][V_GRID /2].style.backgroundColor = 'none';
+blocGrid[H_GRID / 2][V_GRID /2].style.borderRadius = "100%";
+blocGrid[H_GRID / 2][V_GRID /2].style.backgroundSize = "cover";
+blocGrid[H_GRID / 2][V_GRID /2].traverser = true;
 
 
 
