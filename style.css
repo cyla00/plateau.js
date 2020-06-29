@@ -13,7 +13,7 @@ body{
   display: inline-flex;
 }
 .info{
-  margin-right: 30vh;
+  margin-right: 5vh;
 }
 .title{
   font-family: head;
@@ -28,7 +28,6 @@ body{
   margin: 5vh;
 }
 #plateau{
-  margin-left: auto;
   margin-right: auto;
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -43,20 +42,6 @@ body{
   background-color: #142952;
   border: none;
   background-image: url('./img/putin.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 100;
-}
-#nemico{
-  width: 40px;
-  height: 40px;
-  background-color: #e60000;
-  border: none;
-  background-image: url('./img/trump.png');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100%;
