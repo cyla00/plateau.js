@@ -2,9 +2,6 @@
   font-family: 'head';
   src: url('./fonts/head.otf');
 }
-
-
-
 body{
   background-image: url('img/back.jpg');
   background-repeat: no-repeat;

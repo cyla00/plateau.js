@@ -18,14 +18,6 @@ var pion = document.getElementById('pion'),
 
 
 
-
-
-
-
-
-
-
-
 var blockGrid = [];
 for (var i = 0; i < H_GRID; i++) {
   blockGrid.push([]);
@@ -58,6 +50,11 @@ for (var i = 0; i < H_GRID; i++) {
     blockGrid[i].push(block);
   }
 }
+
+
+
+
+
 blockGrid[0][0].style.backgroundImage = "url('img/ruflag.jpg')";
 blockGrid[0][0].style.zIndex = "99";
 blockGrid[0][0].style.backgroundSize = "cover";
@@ -177,7 +174,7 @@ blockGrid[x][y].traverser = false;
   vilain.style.width = "40px";
   vilain.style.height = "40px";
   vilain.style.position = "absolute";
-  vilain.style.backgroundColor = "#800000";
+  vilain.style.backgroundColor = "#ffcccc";
   vilain.style.backgroundImage = "url('img/trump.png')";
   vilain.style.backgroundSize = "cover";
   vilain.style.borderRadius = "100%";
