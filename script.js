@@ -5,19 +5,20 @@ const GRID_SIZE = 40;
 const WINDOW_WIDTH = H_GRID * GRID_SIZE;
 const WINDOW_HEIGHT = V_GRID * GRID_SIZE;
 
+//creation base terrain
 var plateau = document.getElementById('plateau');
 plateau.style.width = WINDOW_WIDTH + "px";
 plateau.style.height = WINDOW_HEIGHT + "px";
 
 
-
+//creation author element
 var pion = document.getElementById('pion'),
   stylePion = pion.style,
   x = 0,
   y = 0;
 
 
-
+//creation random blocks
 var blockGrid = [];
 for (var i = 0; i < H_GRID; i++) {
   blockGrid.push([]);
@@ -152,7 +153,7 @@ blockGrid[H_GRID / 2][V_GRID /2].traverser = true;
 
 
 
-
+//creation villain et deplacement
 var vilainListe = []
 for (var i = 0; i < 10; i++) {
   let vilain = document.createElement('div');
@@ -188,7 +189,6 @@ blockGrid[x][y].traverser = false;
 
   vilainListe.push(vilain)
 }
-//blockGrid[10][10].style.backgroundColor = "blue";
 
 var frame = 0;
 
@@ -262,36 +262,28 @@ function loop() {
 window.requestAnimationFrame(loop);
 
 
-
-
-
-
-
-
-
 document.onkeydown = function(event) {
   var event = event || window.event,
     keyCode = event.keyCode;
   switch (keyCode) {
-    // Up
-    case 38:
+    case 38://su
       if (y > 0 && blockGrid[x][y - 1].traverser)
         y--; // ou y-=40;
       break;
-      // Right
-    case 39:
+    case 39://destra
       if (x < H_GRID - 1 && blockGrid[x + 1][y].traverser)
         x++;
       break;
-      // Down
-    case 40:
+    case 40: //giu
       if (y < H_GRID - 1 && blockGrid[x][y + 1].traverser)
         y++;
       break;
-      // Left
-    case 37:
+    case 37: //sinistra
       if (x > 0 && blockGrid[x - 1][y].traverser)
         x--;
+      break;
+    case 32:
+      plateau.appendChild(bomba).then(push(bomba())); //##################################
       break;
   }
   stylePion.left = String(x * GRID_SIZE) + 'px';
@@ -306,3 +298,25 @@ function randomColor() {
 function random100() {
   return Math.floor(Math.random() * 100);
 }
+
+
+
+// function bomba(){
+//   const bomba = document.createElement("div");
+//   bomba.y = (pion.y + 1);
+//   bomba.x = 0;
+//   bomba.style.width = "40px";
+//   bomba.style.height = "40px";
+//   bomba.style.display = "flex";
+//   bomba.style.position = "absolute";
+//   bomba.style.backgroundImage = "url('img/oil.png')";
+//   bomba.style.zIndex = "99";
+// }
+
+
+
+// document.addEventListener('keydown', function(event){
+//     if (event.keyCode == 32){
+//         plateau.appendChild(bomba).then(push(bomba))
+//     }
+// }, true);
