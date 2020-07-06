@@ -16,5 +16,6 @@
       <div id="pion"></div>
     </div>
     <script src="script.js"></script>
+    <script src="bombe.js"></script>
   </body>
 </html>

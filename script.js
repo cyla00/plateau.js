@@ -283,8 +283,11 @@ document.onkeydown = function(event) {
         x--;
       break;
     case 32:
-      plateau.appendChild(bomba).then(push(bomba())); //##################################
+      if (!blockGrid[x / GRID_SIZE][y / GRID_SIZE].bombe) {
+          creationBombes(blockGrid).then(setTimeout(remove(), 1000));
+        }
       break;
+      default: return;
   }
   stylePion.left = String(x * GRID_SIZE) + 'px';
   stylePion.top = String(y * GRID_SIZE) + 'px';
